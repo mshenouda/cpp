@@ -1,10 +1,11 @@
 CXX=g++
-objects=leetcode.o ccode.o
+objects=leetcode.o base.o
 
-all: a.out
+.PHONY : clean
+all: leetcode.exe
 
-a.out:	leetcode.cpp ccode.cpp
-	g++ -Wall -std=c++14 -g leetcode.cpp ccode.cpp
+# *.o:	base.h
+# 	g++ -Wall -std=c++14 -g -c base.h
 
-clean:
-	rm ./*.out
+leetcode.exe:	leetcode.cpp
+	g++ -Wall -std=c++14 -o leetcode.cpp
