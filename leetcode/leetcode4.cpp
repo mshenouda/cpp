@@ -1,7 +1,3 @@
-#include "pch.h"
-#include "linkList.h"
-#include "MinStack.h"
-#include "Tree.h"
 #include <algorithm>
 #include <stdlib.h>
 #include <utility>

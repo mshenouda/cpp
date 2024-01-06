@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include<bits/stdc++.h>
 #include <functional>
+#include <unordered_map>
+#include <utility>
 using namespace std;
 
 int dfs(int n, vector<int>& vec, map<tuple<int,int>, int>& dp ,int level=0, int index=0) {
@@ -164,12 +166,39 @@ bool equalFrequency(string word) {
     cout << " s = " << s.size() << endl;   
     if (s.size() > 2 || s.size() < 2)
         return false;
-
-    std::sort(s.begin(), s.end(), std::greater<int>());
     for(const int& val: s)
         cout << " val = " << val;
     return false;
 }
+
+string evaluate(string s, std::vector<std::vector<std::string>>& knowledge) {
+    unordered_map<string, string> map;
+
+    string result = "";
+    string currKey = "";
+    for(const auto& row: knowledge)
+        map[row[0]] = row[1];
+
+    for (size_t i = 0; i<s.size(); i++)
+    {
+        if (s[i] != '(')
+            result.push_back(s[i]);
+        else {
+            while (s[++i] != ')') 
+            { currKey.push_back(s[i]);
+            };
+
+            if (map.find(currKey) != map.end()) 
+                result.append('(' + map[currKey] + ')');
+            else
+                result.append("?");
+            currKey = "";
+        }    
+    }
+    return result;
+}   
+
+
 
 int main() {
 
@@ -192,8 +221,16 @@ int main() {
     // vector<vector<int>> rides = {{1, 6, 1}, {3, 10, 2}, {10, 12, 3}, {11, 12, 2}, {12, 15, 2}, {13, 18, 1}};
     // int result = maxTaxiEarnings(n, rides);
     // std::cout << "Result = " << result << endl;
-    const string word = "abcc";
-    bool result = equalFrequency(word);
+    // const string word = "abcc";
+    // bool result = equalFrequency(word);
+    // cout << "Result = " << result << endl;
+    //std::string s = "(name)is(age)yearsold";
+    string s = "hi(name)";
+    std::vector<std::vector<std::string>> knowledge = {{"a", "b"}};
+    // std::string s = "(a)(a)(a)aaa";
+    // std::vector<std::vector<std::string>> knowledge = {{"name", "bob"}, {"age", "two"}};
+    //std::vector<std::vector<std::string>>  knowledge = {{"a", "yes"}};
+    string result = evaluate(s, knowledge);
     cout << "Result = " << result << endl;
     return 0;
 }
