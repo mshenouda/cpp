@@ -8,6 +8,7 @@
 #include <set>
 #include <utility>
 #include <map>
+#include <limits.h>
 using namespace std;
 
 vector<int> rearrangeBarcodes(vector<int>& barcodes) {
@@ -69,24 +70,6 @@ int totalFruit(vector<int>& fruits) {
 }
 
 
-class ThroneInheritance {
-public:
-    ThroneInheritance(string kingName) {
-        
-    }
-    
-    void birth(string parentName, string childName) {
-        
-    }
-    
-    void death(string name) {
-        
-    }
-    
-    vector<string> getInheritanceOrder() {
-        
-    }
-};
 
 // int dfs(vector<vector<int>>& grid, const int m, const int n, int row, int column, vector<vector<int>> dp)
 // {
@@ -300,9 +283,9 @@ int numOfMinutes(int n, int headID, vector<int>& manager, vector<int>& informTim
     // };
    
 
-int main(){
+//int main(){
 
-    cout << "Hello World"<<endl;
+    //cout << "Hello World"<<endl;
     // vector<int> barcodes = {1, 1, 1, 2, 2, 2};
     // vector<int> results = rearrangeBarcodes(barcodes);
     // cout << "results";
@@ -356,9 +339,10 @@ int main(){
     // vector<vector<int>> edges = {{0, 1}, {0, 2}, {1, 2}, {3, 4}};
     // int result = countCompleteComponents(n, edges);
     // cout << "Result = " << result << endl;
-    int n = 6, headID = 2;
-    vector<int> manager = {2,2,-1,2,2,2}, informTime = {0,0,1,0,0,0};
-    int result =  numOfMinutes(n, headID, manager, informTime);
-    cout << "Result = " << result << endl;
-    return 0;
-}
+
+//     int n = 6, headID = 2;
+//     vector<int> manager = {2,2,-1,2,2,2}, informTime = {0,0,1,0,0,0};
+//     int result =  numOfMinutes(n, headID, manager, informTime);
+//     cout << "Result = " << result << endl;
+//     return 0;
+// }
