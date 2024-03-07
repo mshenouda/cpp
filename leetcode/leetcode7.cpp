@@ -8,6 +8,7 @@
 #include <set>
 #include <utility>
 #include <map>
+#include <limits.h>
 using namespace std;
 
 vector<int> rearrangeBarcodes(vector<int>& barcodes) {
@@ -282,9 +283,13 @@ int numOfMinutes(int n, int headID, vector<int>& manager, vector<int>& informTim
     // };
    
 
-int main(){
+//int main(){
 
+<<<<<<< HEAD:newC++/Leetcode6.cpp
     // cout << "Hello World"<<endl;
+=======
+    //cout << "Hello World"<<endl;
+>>>>>>> 9b197e854551770ba8d83daae1df31c488a387d3:leetcode/leetcode7.cpp
     // vector<int> barcodes = {1, 1, 1, 2, 2, 2};
     // vector<int> results = rearrangeBarcodes(barcodes);
     // cout << "results";
@@ -338,9 +343,10 @@ int main(){
     // vector<vector<int>> edges = {{0, 1}, {0, 2}, {1, 2}, {3, 4}};
     // int result = countCompleteComponents(n, edges);
     // cout << "Result = " << result << endl;
-    int n = 6, headID = 2;
-    vector<int> manager = {2,2,-1,2,2,2}, informTime = {0,0,1,0,0,0};
-    int result =  numOfMinutes(n, headID, manager, informTime);
-    cout << "Result = " << result << endl;
-    return 0;
-}
+
+//     int n = 6, headID = 2;
+//     vector<int> manager = {2,2,-1,2,2,2}, informTime = {0,0,1,0,0,0};
+//     int result =  numOfMinutes(n, headID, manager, informTime);
+//     cout << "Result = " << result << endl;
+//     return 0;
+// }
