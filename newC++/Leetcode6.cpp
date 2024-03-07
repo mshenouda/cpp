@@ -69,24 +69,6 @@ int totalFruit(vector<int>& fruits) {
 }
 
 
-class ThroneInheritance {
-public:
-    ThroneInheritance(string kingName) {
-        
-    }
-    
-    void birth(string parentName, string childName) {
-        
-    }
-    
-    void death(string name) {
-        
-    }
-    
-    vector<string> getInheritanceOrder() {
-        
-    }
-};
 
 // int dfs(vector<vector<int>>& grid, const int m, const int n, int row, int column, vector<vector<int>> dp)
 // {
@@ -302,7 +284,7 @@ int numOfMinutes(int n, int headID, vector<int>& manager, vector<int>& informTim
 
 int main(){
 
-    cout << "Hello World"<<endl;
+    // cout << "Hello World"<<endl;
     // vector<int> barcodes = {1, 1, 1, 2, 2, 2};
     // vector<int> results = rearrangeBarcodes(barcodes);
     // cout << "results";
